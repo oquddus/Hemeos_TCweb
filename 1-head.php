@@ -6,15 +6,15 @@ ini_set('session.cookie_httponly', 1); //cookie pouze pomoci http protokolu - ne
 
 header('X-Content-Type-Options: nosniff');
 
-//--vytvoøení session
-session_start(); 
+//--vytvoï¿½enï¿½ session
+session_start();
 
 
 //--jazyky
 if($_GET['lng']):
 	if($_GET['lng']=="cz"): $_SESSION['jazyk']="_cz"; endif;
 	if($_GET['lng']=="en"): $_SESSION['jazyk']="_en"; endif;
-	
+
 	//setcookie("CookieJazyk", $_SESSION['jazyk'], time()+86400*7, "/", "127.0.0.1");	//cookie pro ulozeni zvoleneho jazyka
 	//setcookie("CookieJazyk", $_SESSION['jazyk'], time()+86400*7, "/", "helpdesk.steiner.cz");	//cookie pro ulozeni zvoleneho jazyka
 endif;
@@ -48,19 +48,19 @@ foreach (array_keys($_GET) as $key):
 	if (stristr($_GET[$key], " union ")):
 		$_GET[$key]="";
 	endif;
-	 
+
 	if (stristr($_GET[$key], " or ")):
 		$_GET[$key]="";
 	endif;
-	 
+
 	if (stristr($_GET[$key], " and ")):
 		$_GET[$key]="";
 	endif;
-	 
+
 	if (stristr($_GET[$key], " select ")):
 		$_GET[$key]="";
 	endif;
-	 
+
 endforeach;
 //--konec
 
@@ -70,10 +70,11 @@ include('1-verze.php');
 
 include('1-menu.php');
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <HTML><HEAD>
 
-<TITLE>Steiner, s.r.o.</TITLE>
+<TITLE>Hemeos, LLC</TITLE>
+<link rel=â€iconâ€ href=â€http://tc.hemeos.com/img/hemeos-favicon.icoâ€ type=â€image/iconâ€>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
 <meta http-equiv="Content-Language" content="">
 <meta name="description" content="">
@@ -128,7 +129,7 @@ endif;
 
 <?
 //* =============================================================================
-//	Nastavení (defaultních) rozmìrù systému
+//	Nastavenï¿½ (defaultnï¿½ch) rozmï¿½rï¿½ systï¿½mu
 //	Xinha box
 //============================================================================= */
 
@@ -138,15 +139,15 @@ endif;
 			$zaz = mysql_fetch_array($vysledek);
 			extract($zaz);
 		endif;
-		
+
 		if($width_vynucena):
 			$width=$width_vynucena;
 		endif;
-		
+
 		if(!$width):
 			$width=1200;
 		endif;
-		
+
 		if($width<1200):
 			$width=1200;
 		endif;
@@ -158,18 +159,18 @@ endif;
 		$width5=$width-235;
 		$width8=$width-279;
 		$width9=$width8-140-15;
-		
+
 		//--velikost inputu a textarea
 		$pulka_rozdilu=($width-973)/2;
 		$width6=270+$pulka_rozdilu;
 		$width7=470+$pulka_rozdilu;
-		
+
 		$global_vyska2=340;	//--vyska xinha boxu
 		$global_sirka7=$width-460;	//--sirka xinha boxu
 
-	
+
 if($xinha):
-	
+
 	echo "<script type=\"text/javascript\">
 	var _editor_url  = \"xinha/\";
 	var _editor_lang = \"cz\";
@@ -208,11 +209,11 @@ function addOnloadEvent(fnc){
         window[fnc]();
       };
     }
-    else 
+    else
       window.onload = fnc;
   }
 }
-  
+
 </script>";
 */
 ?>
@@ -225,11 +226,11 @@ function addOnloadEvent(fnc){
 
 
 
-//pro zatmnìní obrazovky
-	echo "<div id=\"meziprostor_kalendar\" style=\"display:none;height:10px;\" onclick=\"minimize('iddivu_kalendar'); minimize('meziprostor_kalendar');\">&nbsp;</div>";	
+//pro zatmnï¿½nï¿½ obrazovky
+	echo "<div id=\"meziprostor_kalendar\" style=\"display:none;height:10px;\" onclick=\"minimize('iddivu_kalendar'); minimize('meziprostor_kalendar');\">&nbsp;</div>";
 	echo "<div id=\"meziprostor\" style=\"display:none;\" onclick=\"minimize('ajax_div'); minimize('meziprostor');\">&nbsp;</div>";
-		
-	//pro zobrazení kalednáøe
+
+	//pro zobrazenï¿½ kalednï¿½ï¿½e
 	echo "<div id=\"iddivu_kalendar\" style=\"display:none;\">";
 	echo "<form class=\"formik\" onsubmit=\"return false;\" action=\"\" name=\"ajax_cal_formular\">";
 	echo "<div id=\"crm_kalendar\" style=\"float:left; width:100%;\"></div>";
@@ -256,20 +257,20 @@ $query_string=preg_replace("(lng=[a-z]+&)", "", $query_string);
 </div>
 <div class="user">
 	<div class="user-ico"><img src="img/user.gif" width="50" height="50" alt=""></div>
-	<div class="user-logged text1"><? echo gtext('pøihlášený uživatel',91)?>: <span class="text2"><? echo $_SESSION['usr_login']; ?></span></div>
+	<div class="user-logged text1"><? echo gtext('pï¿½ihlï¿½ï¿½enï¿½ uï¿½ivatel',91)?>: <span class="text2"><? echo $_SESSION['usr_login']; ?></span></div>
 </div>
 
 <div class="menu" style="margin-bottom:20px;">
 <?
 //* =============================================================================
-//	Hlavní menu
+//	Hlavnï¿½ menu
 //============================================================================= */
 	//--zjisteni stranky
 	$_stranka_cela=str_replace("/","",strrchr($_SERVER['PHP_SELF'],"/"));
 	$_stranka_bez=explode(".",$_stranka_cela);
 	$_stranka=explode("-",$_stranka_bez[0]);
-	
-	
+
+
 	//--vypis menu
 	if(count($_pole_menu)>0):
 		foreach($_pole_menu as $klic=>$hodnota):
@@ -278,18 +279,18 @@ $query_string=preg_replace("(lng=[a-z]+&)", "", $query_string);
 			$vysledek_c = mysql_query("SELECT ID_admin FROM admin_prava WHERE ID_admin='".clean_high($_SESSION[usr_ID])."' AND modul='".mysql_real_escape_string($klic)."'");
 
 				if(mysql_num_rows($vysledek_c)==1):
-				
+
 					$klic=$klic.$_SESSION['jazyk'];
-				
+
 					if(File_Exists ("img/menu/".$klic.".png")):
-					
+
 						list($sirka_menu,$vyska_menu)=GetImageSize("img/menu/".$klic.".png");
-						
+
 						echo "<a href=\"$hodnota[0].php\" onmouseover=\"swtch3('".$klic."2','$klic')\" onmouseout=\"swtch3('$klic"; if($_stranka[0]==$klic): echo "2"; endif; echo "','$klic')\"><img src=\"img/menu/$klic"; if($_stranka[0]==$klic): echo "2"; endif; echo ".png\" width=\"$sirka_menu\" height=\"$vyska_menu\" alt=\"\" name=\"$klic\"></a>";
 					endif;
-					
+
 				endif;
-			
+
 		endforeach;
 	endif;
 ?>
@@ -305,11 +306,11 @@ $query_string=preg_replace("(lng=[a-z]+&)", "", $query_string);
 			foreach($_pole_menu[$_stranka[0]] as $hodnota):
 
 				$zobrazit_zalozku=1;
-				
-				//zjištìní šíøky obrázku
+
+				//zjiï¿½tï¿½nï¿½ ï¿½ï¿½ï¿½ky obrï¿½zku
 				$obrazek="img/zalozky/".$_stranka[0]."0".$citac.""; if($_stranka_bez[0]==$hodnota&&!$_GET[ID]) $obrazek=$obrazek."a";  $obrazek=$obrazek.$_SESSION['jazyk'].".gif";
 				list($sirka_img,$vyska_img)=GetImageSize($obrazek);
-				
+
 				//zjistit, jestli ma uzivatel pravo vkladat do novinek
 				if($_stranka[0]=="novinky" && $citac==3):
 					$vysledek_check = mysql_result(mysql_query("SELECT COUNT(*) FROM admin_prava_rozsirujici WHERE ID_admin='".clean_high($_SESSION[usr_ID])."' AND modul='novinky' AND rozsireni='1'"), 0);
@@ -317,14 +318,14 @@ $query_string=preg_replace("(lng=[a-z]+&)", "", $query_string);
 						$zobrazit_zalozku=0;
 					endif;
 				endif;
-				
+
 				if($zobrazit_zalozku):
 					echo "<a href=\"$hodnota.php\" onmouseover=\"swtch2('".$_stranka[0]."0".$citac."a".$_SESSION['jazyk']."','f".$citac."')\" onmouseout=\"swtch2('".$_stranka[0]."0".$citac.""; if($_stranka_bez[0]==$hodnota&&!$_GET[ID]): echo "a"; endif; echo $_SESSION['jazyk']."','f".$citac."')\"><img src=\"img/zalozky/".$_stranka[0]."0".$citac.""; if($_stranka_bez[0]==$hodnota&&!$_GET[ID]): echo "a"; endif; echo $_SESSION['jazyk'].".gif\" width=\"".$sirka_img."\" height=\"41\" alt=\"\" name=\"f".$citac."\" style=\"margin-right:6px;\"></a>";
-					
+
 					if($citac<count($_pole_menu[$_stranka[0]])):
 						echo "<img src=\"img/zalozky/predel.gif\" width=\"3\" height=\"41\" alt=\"\" style=\"margin-right:6px;\">";
 					endif;
-					
+
 					$citac++;
 				endif;
 			endforeach;
