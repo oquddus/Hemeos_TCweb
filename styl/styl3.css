@@ -1,0 +1,815 @@
+body {
+	margin:0px; background-color: #262626;
+	position:relative;
+	text-align: center;
+
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Arial;
+}
+
+
+img { border:0; }
+
+
+.cursor-move{
+	cursor:move;
+}
+
+.zaklad0 {
+	float:left; width:100%; height: auto;
+	background-image: url('../img/bg.jpg'); background-repeat: repeat-x;
+	background-color: #ffffff;
+}
+
+.zaklad {
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+}
+
+
+
+
+
+
+.logo {
+	float:left; width:392px; height:105px;
+}
+
+.odhlasit {
+	float:right; width:144px; height:30px;
+}
+
+.vlajky {
+	float:right; width:144px; height:auto;
+	text-align:right;
+	margin-top:8px;
+}
+
+.warning-login {
+	float:right; width:95px; height:auto;
+	text-align:right;
+}
+
+.user {
+	clear:right; float:right; width:auto; height:50px;
+	margin-top:12px;
+}
+
+.user-login {
+	clear:right; float:right; width:auto; height:auto;
+	margin-top:4px; margin-right:20px; display:inline;
+}
+
+.user-ico {
+	float:right; width:55px; height:50px;
+}
+
+.user-logged {
+	float:right; width:auto; height:auto;
+	margin-top:30px;
+}
+
+
+
+.login-img {
+	float:left; width:220px; height:auto;
+	margin-top:80px;
+	text-align:right;
+}
+
+
+
+.menu {
+	clear:left; float:left; width:185px; height:auto;
+	margin-top:60px;
+}
+
+.prava-login {
+	float:left; height:auto;
+	margin-top:45px; margin-left:30px; display:inline;
+}
+
+.prava {
+	float:left; height:auto;
+	margin-top:25px; margin-left:40px; display:inline;
+}
+
+.zalozky {
+	float:left; height:41px;
+	margin-left:2px; display:inline;
+	background-image: url('../img/bg-zalozky.gif'); background-repeat: repeat-x; background-position: left bottom;
+}
+
+.menu-zalozky {
+	float:left; width:auto; height:41px;
+	margin-left:20px; display:inline;
+}
+
+.obal-stin-r {
+	float:left; width:100%;
+	background-image: url('../img/bg-stin-r.gif'); background-repeat: repeat-y; background-position: right top;
+}
+
+.obal-stin-l {
+	float:left; width:100%;
+	background-image: url('../img/bg-stin-l.gif'); background-repeat: repeat-y; background-position: left top;
+}
+
+
+.vnitrek-obal-login {
+	float:left; 
+	margin-left:4px; display:inline;
+	background-color:#fefefe;
+	background-image: url('../img/bg-stin-b.gif'); background-repeat: repeat-x; background-position: left bottom;
+}
+
+.vnitrek-obal {
+	float:left; min-height:300px; _height:300px;
+	margin-left:4px; display:inline;
+	background-color:#fefefe;
+	background-image: url('../img/bg-stin-b.gif'); background-repeat: repeat-x; background-position: left bottom;
+}
+
+.vnitrek {
+	float:left; height:auto;
+	margin-top:30px; margin-bottom:60px;
+	margin-left: 20px; display:inline;
+}
+
+
+.stin-dole {
+	float:left; height:10px;
+	margin-left:2px; margin-right:2px; display:inline; margin-bottom:70px;
+	background-image: url('../img/bg-stin-dole.gif'); background-repeat: repeat-x; background-position: left top;
+}
+
+
+.patka {
+	float:left; width:100%;  height:178px;
+	background-image: url('../img/bg-patka.gif'); background-repeat: repeat-x;
+}
+
+.patka-svetlo {
+	float:left; width:100%;  height:178px;
+	background-image: url('../img/bg-patka.jpg'); background-repeat: no-repeat; background-position: center top;
+}
+
+.patka-vnitrek {
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	width:973px;
+}
+
+.patka-text1 {
+	float:left; width:240px;  height:178px;
+	margin-top:33px; margin-left:10px; display:inline;
+	text-align:left;
+}
+
+.patka-text2 {
+	float:left; width:220px;  height:178px;
+	margin-top:33px; margin-left:160px; display:inline;
+	text-align:left;
+}
+
+.patka-text3 {
+	float:left; width:180px;  height:178px;
+	margin-top:33px; margin-left:150px; display:inline;
+	text-align:left;
+}
+
+
+
+.bunka-message {
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#cde4f6;
+	border:1px #4085b9 solid;
+	padding:8px;
+	margin-bottom:20px;
+}
+
+
+
+.pozadavek-zalozky {
+	float:left; width:100%; text-align:left;
+	border-bottom:1px solid #bcbcbc;
+	margin-top:30px;
+}
+
+.pozadavek-id {
+	position:absolute; width:50px; left:0; top: 1px; font-size:16px
+}
+
+
+
+
+#div_column_select{
+	position:absolute; top:14px; left:0; width:500px; background-color:#f2f0eb; border:1px solid #d8d7d5;
+	padding:3px;
+	font-size:11px;
+	font-weight:normal;
+}
+
+.div_column_filter{
+	position:absolute; top:16px; left:12px; width:200px; background-color:#f2f0eb; border:1px solid #d8d7d5; z-index:50;
+	padding:3px;
+	font-size:11px;
+	font-weight:normal;
+}
+
+
+/* =============================================================================
+Tabulky
+============================================================================= */
+
+table {
+	clear:left;
+	border:0;
+	color: #5b5b5b;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Arial;
+	margin-bottom:20px;
+	border-bottom:1px solid #bcbcbc;
+	text-align:left;
+	border-collapse: collapse;
+}
+
+thead {
+	color: #3f3f3f;
+	FONT-SIZE: 13px;
+	FONT-FAMILY: Arial;
+	font-weight:bold;
+}
+
+
+#tb-head td, th {
+	height:26px;
+	border-bottom:0;
+	padding-right:3px; padding-left:12px;
+	border-bottom:1px solid #bcbcbc;
+	text-align:left;
+}
+
+
+#tb-body td {
+	height:26px;
+	border-bottom:1px solid #eaeaea;
+	padding-right:3px; padding-left:12px;
+}
+
+#tb-body2 td {
+	height:26px;
+	border-bottom:1px solid #bdbdbd;
+	padding-right:3px; padding-left:12px;
+}
+
+#tb-body-diskuse td {
+	min-height:20px; _height:20px;
+	border-bottom:1px solid #eaeaea;
+	padding-right:3px; padding-left:12px;
+	padding-top:8px;
+	padding-bottom:8px;
+}
+
+
+
+
+
+#tb-form td {
+	height:26px;
+	border-top:1px solid #b8b8b8;
+	border-right:1px solid #b8b8b8;
+	border-left:1px solid #b8b8b8;
+	padding: 9px 0 9px 5px;
+}
+
+
+
+
+.barva1 {
+	background-color:#f9f9f9;
+}
+
+.barva2 {
+	background-color:#f5f5f5;
+}
+
+.barva3 {
+	background-color:#eaeaea;
+}
+
+.barva4 {
+	background-color:#f2f1f1;
+}
+
+.barva5 {
+	background-color:#fbd3d3;
+}
+.barva5b {
+	background-color:#fae1e1;
+}
+
+.barva6 {
+	background-color:#d7eab5;
+}
+.barva6b {
+	background-color:#e4f3c9;
+}
+
+.barva7 {
+	background-color:#fde5bb;
+}
+.barva7b {
+	background-color:#fde5bb;
+}
+
+.barva_radku1{
+	background-color:#dceff4;
+}
+
+.barva_radku2{
+	background-color:#ffdecc;
+}
+
+.barva_radku3{
+	background-color:#fbecd4;
+}
+
+.barva_radku4{
+	background-color:#ddeae3;
+}
+
+.barva_radku5{
+	background-color:#e6eadd;
+}
+
+.barva_radku6{
+	background-color:#ead7e4;
+}
+
+.barva_radku7{
+	background-color:#dbdffa;
+}
+
+.barva_radku8{
+	background-color:#f7f1d9;
+}
+
+.barva_radku9{
+	background-color:#f3f0e5;
+}
+
+.barva_radku10{
+	background-color:#cce7f5;
+}
+
+.barva_radku11{
+	background-color:#f2d1d1;
+}
+
+.barva_radku12{
+	background-color:#e2f2d1;
+}
+
+
+.posuvnik {
+	height:16px; cursor:move;
+}
+
+
+/* =============================================================================
+Odkazy, texty
+============================================================================= */
+
+
+a {
+	color: #2a67a5;
+	TEXT-DECORATION: underline;
+}
+
+
+a:hover  {
+	color: #2a67a5;
+	TEXT-DECORATION: none;
+}
+
+
+
+
+a.odkaz1 {
+	color: #478acf;
+	TEXT-DECORATION: none;
+}
+
+a.odkaz1:hover  {
+	color: #478acf;
+	TEXT-DECORATION: underline;
+}
+
+
+
+a.odkaz2 {
+	color: #3f3f3f;
+	TEXT-DECORATION: none;
+}
+
+a.odkaz2:hover  {
+	color: #3f3f3f;
+	TEXT-DECORATION: underline;
+}
+
+
+a.odkaz3 {
+	color: #2a67a5;
+	TEXT-DECORATION: none;
+}
+
+
+a.odkaz3:hover  {
+	color: #2a67a5;
+	TEXT-DECORATION: underline;
+}
+
+
+
+h2{
+	color: #0d0d0d;
+	font-size:13px;
+	margin:0; padding:0;
+	text-align:left;
+}
+
+
+
+h1 {
+	font-size:18px;
+}
+
+h2 {
+	font-size:14px;
+}
+
+
+.text {
+	color: #0d0d0d;
+}
+
+.text1 {
+	color: #3b3b3b;
+}
+
+.text2 {
+	color: #2663a1;
+}
+
+.text3 {
+	color: #d1d1d1;
+}
+
+.text4 {
+	color: #a3a3a3;
+}
+
+.text5 {
+	color: #ff0000;
+}
+
+.text6 {
+	color: #618900;
+}
+
+.text7 {
+	color: #4b4b4b;
+}
+
+
+.povinne {
+	color: #ff0000;
+}
+
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+
+
+/* =============================================================================
+Formularove prvky
+============================================================================= */
+
+.form-lr {
+	position:relative; float:left; width:auto; height:auto; margin-bottom:15px;
+}
+
+
+.form-left {
+	float:left; width:140px; height:auto;
+	margin-top:4px;
+	text-align:right;
+}
+
+.form-right {
+	float:left; width:530px; height:auto;
+	margin-left:15px; display:inline;
+	text-align:left;
+}
+
+form {
+	margin:0;
+}
+
+
+input, textarea, select {
+	color: #515151;
+	font-size: 12px;
+	font-family: Arial;
+	
+	border:1px solid #d6d6d6;
+	background-color: #f7f7f7;
+	padding:0; margin:0;
+	padding-top:3px;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+
+input {
+	height:19px;
+}
+
+textarea {
+	height:100px;
+}
+
+select {
+	width:220px; height:22px;
+	padding-top:0; padding-right:0;
+}
+
+input[type=checkbox] {
+	border:0;
+	background:none;
+}
+
+input[type=radio] {
+	border:0;
+	background:none;
+}
+
+input[type=image] {
+	border:0;
+	background:none;
+}
+
+
+label, abbr {
+	cursor:pointer; cursor:hand;
+}
+
+.bg1 { background-color: #f2e0e0 !important; }
+
+
+.form-send {
+	width: 134px; height:40px;
+	margin-top:20px; margin-bottom:20px;
+	background-image: url('../img/odeslat_cz.gif'); background-repeat: no-repeat;
+	border:0;
+	cursor:pointer;
+}
+
+.form-send_cz {
+	width: 134px; height:40px;
+	margin-top:20px; margin-bottom:20px;
+	background-image: url('../img/odeslat_cz.gif'); background-repeat: no-repeat;
+	border:0;
+	cursor:pointer;
+}
+
+.form-send_en {
+	width: 134px; height:40px;
+	margin-top:20px; margin-bottom:20px;
+	background-image: url('../img/odeslat_en.gif'); background-repeat: no-repeat;
+	border:0;
+	cursor:pointer;
+}
+
+.form-ok {
+	width: 56px; height:23px;
+	background-image: url('../img/ok.png'); background-repeat: no-repeat;
+	background-color:#ffffff;
+	border:0;
+	cursor:pointer;
+}
+
+.form-ok2 {
+	width: 56px; height:23px;
+	background-image: url('../img/ok2.png'); background-repeat: no-repeat;
+	background-color:transparent;
+	border:0;
+	cursor:pointer;
+}
+
+
+
+/* =============================================================================
+Filtrovaci formulare
+============================================================================= */
+
+.hledej-text {
+	float:left; width:50%;
+	margin-left:12px; display:inline; margin-top:7px;
+	text-align:left;
+}
+
+.hledej-input {
+	float:right; width:40%;
+	margin-right:12px; display:inline; 
+	text-align:right;
+}
+
+
+.tb-abeceda {
+	clear:left;
+	width:100%;
+	border:1px #e1e7ea solid;
+	text-align:left;
+	margin:0;
+	
+}
+
+
+.tb-abeceda TD {
+	background-color:#f1f2f2;
+	text-align:left;
+}
+
+
+
+
+
+/* =============================================================================
+Zatmeni obrazovky, kalendar
+============================================================================= */
+
+#meziprostor_kalendar {
+	background-color:#000000;
+	position:absolute; top:0; left:0; width:100%; z-index:90;
+	opacity:0.7; filter:alpha(opacity=70);
+}
+
+#meziprostor {
+	background-color:#000000;
+	position:absolute; top:0; left:0; width:100%; z-index:90;
+	opacity:0.7; filter:alpha(opacity=70);
+}
+
+#iddivu_kalendar {
+	position:absolute; width:308px; top:10px; left:50%;
+	margin-left:-154px; z-index:100;
+	font-family:Arial; font-size:12px;
+}
+
+
+
+/* =============================================================================
+Styly kalendáøe 
+============================================================================= */
+.kalendar0 {	float:left; width: auto; height:auto; border-left: 1px solid #0b0b0b; border-right: 1px solid #0b0b0b; border-bottom: 1px solid #0b0b0b;}
+.kalendar { float:left; width: 302px; height:auto; background-color:#1f1f1f; padding-bottom:1px; }
+.kalendar-head0 { float:left; width: 43px; height:28px; background-image: url('../img/kalendar/02.gif'); background-repeat: repeat-x; margin-left:1px; display:inline; margin-top:1px; }
+.kalendar-head { float:left; width: 42px; height:28px; background-image: url('../img/kalendar/02.gif'); background-repeat: repeat-x; margin-left:1px; display:inline; margin-top:1px; }
+.kalendar-head2 { float:left; width: 43px; height:28px; background-image: url('../img/kalendar/02.gif'); background-repeat: repeat-x; margin-left:1px; display:inline; margin-top:1px; }
+.kalendar-no-b { margin-left:0; }
+.kalendar-den { float:left; width: 100%; height:auto; margin-top:7px; text-align:center; }
+.kalendar-bunka { float:left; width: 43px; height:35px; background-image: url('../img/kalendar/kalendar-bg.gif'); background-repeat: no-repeat; }
+.kalendar-bunka2 { float:left; width: 43px; height:35px; background-image: url('../img/kalendar/kalendar-bg2.gif'); background-repeat: no-repeat; }
+.kalendar-full1 { float:left; width: 40px; height:31px; margin-left:2px; display:inline;	margin-top:1px; background-image: url('../img/kalendar/kalendar-full1.gif'); background-repeat: no-repeat; }
+.kalendar-full2 { float:left; width: 40px; height:31px; margin-left:2px; display:inline;	margin-top:1px; background-image: url('../img/kalendar-full5.gif'); background-repeat: no-repeat; }
+.kalendar-full3 { float:left; width: 40px; height:31px; margin-left:2px; display:inline;	margin-top:1px; background-image: url('../img/kalendar-full3.gif'); background-repeat: no-repeat; }
+.kalendar-full4 { float:left; width: 40px; height:31px; margin-left:2px; display:inline;	margin-top:1px; background-image: url('../img/kalendar-full4.gif'); background-repeat: no-repeat; }
+.kalendar-full5 { float:left; width: 40px; height:31px; margin-left:2px; display:inline;	margin-top:1px; background-image: url('../img/kalendar-full5.gif'); background-repeat: no-repeat; }
+.kalendar-prev { float:left; width: 70px; height:auto; margin-top:3px; }
+.kalendar-date {	float:left; width: 178px; height:auto; text-align:center; margin-left:2px; display:inline; margin-bottom:8px; }
+.kalendar-next { float:right; width: 35px; height:auto; margin-right:1px; display:inline; text-align:right;	margin-top:3px; }
+
+a.kal-next { color: #bee376; FONT-SIZE:11px; FONT-FAMILY:Arial; text-align:left;	TEXT-DECORATION: none; }
+a.kal-next:hover  { color: #bee376; FONT-SIZE: 11px;	FONT-FAMILY: Arial; text-align:left; TEXT-DECORATION: underline; }
+a.kal-den {	color: #1c1c1c;	FONT-SIZE: 12px; FONT-FAMILY: Arial; TEXT-DECORATION: none; }
+a.kal-den:hover  { color: #1c1c1c; FONT-SIZE:12px; FONT-FAMILY: Arial; TEXT-DECORATION: underline; }
+
+.cal_text-large2 { color: #b4cd83; FONT-SIZE: 12px; FONT-FAMILY: Arial; }
+.cal_text { color: #222222; FONT-SIZE: 12px;	FONT-FAMILY: Arial; }
+.cal_text-small { color: #222222; FONT-SIZE: 8px;	FONT-FAMILY: Arial; }
+.cal_text-small-white { color: #ffffff; FONT-SIZE: 8px;	FONT-FAMILY: Arial; }
+.cal_text-nadpis { color: #d4d4d4; FONT-SIZE: 12px;	FONT-FAMILY: Arial; }
+.cal-form {	font-family: Arial; color: #cdcdcd; font-size: 12px; border:1px solid #000000; background-color: #303030; height:19px; width:80px; }
+
+
+
+
+
+/* =============================================================================
+Ajax multibox
+============================================================================= */
+
+#table-ajax thead {
+	background-image: url('../img/table/02.gif'); background-repeat: repeat-x;
+	color: #ababab;
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Arial;
+}
+
+#table-ajax .td1 {
+	width:12px;
+	background-image: url('../img/table/01.png'); background-repeat: no-repeat;
+}
+
+#table-ajax .td2 {
+	padding-bottom:3px;
+	padding-left:1px;
+}
+
+#table-ajax .td3 {
+	width:28px;
+	background-image: url('../img/table/03.png'); background-repeat: no-repeat; background-position: right top;
+}
+
+#table-ajax .td-min {
+	float:right; width:28; height:28px; margin-top:-1px; margin-right:3px;
+}
+
+.selectbox1 {
+	position:relative; float:left; width:220px; height:auto;
+
+}
+
+
+.selectbox2 {
+	position:absolute; width:384px; height:auto; top:44px; left:50%; margin-left:-154px; z-index:500;
+}
+
+.selectbox3 {
+	float:left; width:100%; margin-top:-24px;
+	background-color:#ffffff;
+	border: 1px solid #000000;
+
+}
+
+.selectbox4 {
+	float:left; width:100%; margin-left:0; display:inline;
+	margin-top:1px; margin-bottom:15px;
+}
+
+.selectbox5 {
+	float:left; width:90%; margin-left:10px; display:inline;
+	text-align:center;
+}
+
+.selectbox6 {
+	position:relative; float:left;width:100%; height:auto;
+	margin-bottom:4px;
+}
+
+.selectbox7 {
+	float:left; width:88%;
+	color: #8e3200;
+}
+
+.selectbox8b {
+	position:absolute; width:25px; right:2px; top:0;
+}
+
+.selectbox9 {
+	float:left; width:100%; height:auto; margin-top:5px;
+}
+
+a.odkaz-selectbox7 {
+	color: #8e3200;
+	TEXT-DECORATION: none;
+}
+
+
+a.odkaz-selectbox7:hover  {
+	color: #8e3200;
+	TEXT-DECORATION: underline;
+}
+
+a.odkaz-selectbox8 {
+	color: #4a4a4a;
+	TEXT-DECORATION: none;
+}
+
+
+a.odkaz-selectbox8:hover  {
+	color: #4a4a4a;
+	TEXT-DECORATION: underline;
+}

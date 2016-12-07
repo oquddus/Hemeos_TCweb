@@ -1,0 +1,24 @@
+
+#Header set X-XSS-Protection "1; mode=block"
+#Header set X-Content-Type-Options "nosniff"
+#Header set X-Frame-Options "DENY"
+#Header set Sctrict-Transport-Security "max-age=157680000"
+
+#php_value session.cookie_httponly 1
+#php_value session.cookie_secure 1
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+#php_value upload_max_filesize 2M
+#php_value post_max_size 2M
+#php_value max_execution_time 100
+#php_value max_input_time 100
+
+#AddDefaultCharset UTF-8
+#DefaultLanguage en-US 
+
+#php_value session.cookie_httponly 1
+#php_value session.cookie_secure 1
+
