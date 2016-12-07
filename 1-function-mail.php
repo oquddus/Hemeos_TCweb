@@ -137,7 +137,7 @@ function zasli_email($od, $komu, $predmet, $obsah){
 		$zapati="";
 
 		
-		$zapati.="<br><br><br>STEINER, s.r.o.<br>
+		$zapati.="<br><br><br>Hemeos, LLC<br>
 		D��insk� 477, 109 00  Praha 10<br>
 		I�: 26488931, DI�: CZ26488931
 		<br>".PHP_EOL."

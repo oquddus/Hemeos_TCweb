@@ -174,7 +174,7 @@ endif;
 
 <div class="patka"><div class="patka-svetlo">
 	<div class="patka-vnitrek text4">
-		<div class="patka-text1"><span class="text3 bold">Steiner, s.r.o.</span><br><br>Tel.: +420 274 782 630<br>email: <a href="mailto:steiner@steiner.cz" class="odkaz1">steiner@steiner.cz</a></div>
+		<div class="patka-text1"><span class="text3 bold">Hemeos, LLC</span><br><br>Tel.: +1 (480) 251-8012<br>email: <a href="mailto:douggrant@hemeos.com" class="odkaz1">douggrant@hemeos.com</a></div>
 		<div class="patka-text2"><span class="text3 bold"></div>
 		<div class="patka-text3">Copyright � 2010 Steiner,s.r.o.<br><br><? echo gtext('Verze',109)." ".$_version; ?></div>
 	</div>
