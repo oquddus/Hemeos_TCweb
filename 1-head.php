@@ -6,7 +6,7 @@ ini_set('session.cookie_httponly', 1); //cookie pouze pomoci http protokolu - ne
 
 header('X-Content-Type-Options: nosniff');
 
-//--vytvo�en� session
+//--vytvoï¿½enï¿½ session
 session_start();
 
 
@@ -74,7 +74,7 @@ include('1-menu.php');
 <HTML><HEAD>
 
 <TITLE>Hemeos, LLC</TITLE>
-<link rel=”icon” href=”http://tc.hemeos.com/img/hemeos-favicon.ico” type=”image/icon”>
+<link rel=â€�iconâ€� href=â€�http://tc.hemeos.com/img/hemeos-favicon.icoâ€� type=â€�image/iconâ€�>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
 <meta http-equiv="Content-Language" content="">
 <meta name="description" content="">
@@ -96,7 +96,7 @@ include('1-menu.php');
 <script type="text/javascript" src="script/ajax.js"></script>
 <script type="text/javascript" src="script/sweetTitles.js"></script>
 
-<script type="text/javascript" src="script/jquery1.12.4.min.js"></script>
+<script type="text/javascript" src="script/jquery1.7.1.js"></script>
 <script type="text/javascript" src="script/jquery-ui.js"></script>
 <script type="text/javascript" src="script/jquery-skripty.js?v=2"></script>
 
@@ -129,7 +129,7 @@ endif;
 
 <?
 //* =============================================================================
-//	Nastaven� (defaultn�ch) rozm�r� syst�mu
+//	Nastavenï¿½ (defaultnï¿½ch) rozmï¿½rï¿½ systï¿½mu
 //	Xinha box
 //============================================================================= */
 
@@ -226,11 +226,11 @@ function addOnloadEvent(fnc){
 
 
 
-//pro zatmn�n� obrazovky
+//pro zatmnï¿½nï¿½ obrazovky
 	echo "<div id=\"meziprostor_kalendar\" style=\"display:none;height:10px;\" onclick=\"minimize('iddivu_kalendar'); minimize('meziprostor_kalendar');\">&nbsp;</div>";
 	echo "<div id=\"meziprostor\" style=\"display:none;\" onclick=\"minimize('ajax_div'); minimize('meziprostor');\">&nbsp;</div>";
 
-	//pro zobrazen� kaledn��e
+	//pro zobrazenï¿½ kalednï¿½ï¿½e
 	echo "<div id=\"iddivu_kalendar\" style=\"display:none;\">";
 	echo "<form class=\"formik\" onsubmit=\"return false;\" action=\"\" name=\"ajax_cal_formular\">";
 	echo "<div id=\"crm_kalendar\" style=\"float:left; width:100%;\"></div>";
@@ -257,13 +257,13 @@ $query_string=preg_replace("(lng=[a-z]+&)", "", $query_string);
 </div>
 <div class="user">
 	<div class="user-ico"><img src="img/user.gif" width="50" height="50" alt=""></div>
-	<div class="user-logged text1"><? echo gtext('p�ihl��en� u�ivatel',91)?>: <span class="text2"><? echo $_SESSION['usr_login']; ?></span></div>
+	<div class="user-logged text1"><? echo gtext('pï¿½ihlï¿½ï¿½enï¿½ uï¿½ivatel',91)?>: <span class="text2"><? echo $_SESSION['usr_login']; ?></span></div>
 </div>
 
 <div class="menu" style="margin-bottom:20px;">
 <?
 //* =============================================================================
-//	Hlavn� menu
+//	Hlavnï¿½ menu
 //============================================================================= */
 	//--zjisteni stranky
 	$_stranka_cela=str_replace("/","",strrchr($_SERVER['PHP_SELF'],"/"));
@@ -307,7 +307,7 @@ $query_string=preg_replace("(lng=[a-z]+&)", "", $query_string);
 
 				$zobrazit_zalozku=1;
 
-				//zji�t�n� ���ky obr�zku
+				//zjiï¿½tï¿½nï¿½ ï¿½ï¿½ï¿½ky obrï¿½zku
 				$obrazek="img/zalozky/".$_stranka[0]."0".$citac.""; if($_stranka_bez[0]==$hodnota&&!$_GET[ID]) $obrazek=$obrazek."a";  $obrazek=$obrazek.$_SESSION['jazyk'].".gif";
 				list($sirka_img,$vyska_img)=GetImageSize($obrazek);
 
