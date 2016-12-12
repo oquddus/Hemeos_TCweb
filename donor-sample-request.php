@@ -277,26 +277,30 @@ if(!$_POST['action']):
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
 		<tr>
+		
+			<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
+		<tr>
 			<td width=\"50%\" valign=\"top\">
 				<div style=\"float:left; margin-top:4px;\"><b>Patient name:</b></div>
 				<div style=\"float:left; margin-left:5px;\"><input type=\"hidden\" style=\"width:260px;\" name=\"patient_name\" id=\"patient_name\" value=\"$patient_name\" readonly>
 				<select name=\"patient_select\" id=\"patient_select\" style=\"width:250px;\" onchange=\"zmena_pacienta();\" tabindex=\"1\">";
 				
 						echo "<option value=\"\">- choose patient -</option>";
-
-						$vysledek_sub = mysql_query("SELECT last_name, first_name, PatientNum AS PatientN, RegID AS rid FROM search_request WHERE (search_request.ID_stavu='2' OR PatientNum='".clean_high($PatientNum)."') AND PatientNum!='' ".mysql_real_escape_string($where_pomocny)." ORDER BY PatientNum");
+						
+						$vysledek_sub = mysql_query("SELECT last_name, first_name, PatientNum AS PatientN, RegID AS rid FROM search_request WHERE (search_request.ID_stavu='2' OR PatientNum='".mysql_real_escape_string($PatientNum)."') AND PatientNum!='' $where_pomocny ORDER BY PatientNum");
 							if(mysql_num_rows($vysledek_sub)>0):
 								while($zaz_sub = mysql_fetch_assoc($vysledek_sub)):
 									$zaz_sub=htmlspecialchars_array_encode($zaz_sub);
 									extract($zaz_sub);
 									
-									echo "<option value=\"$PatientN\""; if($_GET['Pn']==$PatientN || $PatientNum==$PatientN): echo " selected"; endif; echo " data-reg=\"".$rid."\">$last_name $first_name, ($PatientN)</option>";
+									echo "<option value=\"$PatientN\""; if(htmlspecialchars($_GET['Pn'])==$PatientN || $PatientNum==$PatientN): echo " selected"; endif; echo " data-reg=\"".$rid."\">$last_name $first_name, ($PatientN)</option>";
 									
 								endwhile;
 							endif;
 						@mysql_free_result($vysledek_sub);
 				
-					echo "</select></div>
+					echo "</select>
+				</div>
 			</td>
 			
 			<td width=\"50%\" valign=\"top\">
