@@ -304,7 +304,7 @@ if(!$_POST['action']):
 			</td>
 			
 			<td width=\"50%\" valign=\"top\">
-				<div style=\"float:left; margin-top:4px;\"><b>Patient ID number:</b><br>(assigned by patient's registry)</div>
+				<div style=\"float:left; margin-top:4px;\"><b>Patient ID number:</b><br>(assigned by Hemeos)</div>
 				<div style=\"float:left; margin-left:5px;\"><input type=\"text\" style=\"width:260px;\" name=\"PatientID\" id=\"PatientID\" value=\""; if($PatientID): echo $PatientID; endif; echo "\" class=\"bg1\" readonly>
 				<input type=\"hidden\" style=\"width:260px;\" name=\"PatientNum\" id=\"PatientNum\" value=\""; if($PatientNum): echo $PatientNum; endif; echo "\" readonly></div>
 			</td>
@@ -316,9 +316,8 @@ if(!$_POST['action']):
 			</td>
 			
 			<td width=\"50%\" valign=\"top\">
-				<div style=\"float:left; margin-top:4px;\"><b>Patient ID number:</b><br>(assigned by donors's registry)</div>
-				<div style=\"float:left; margin-left:5px;\"><input type=\"text\" style=\"width:240px;\" name=\"patient_id_dn\" value=\"$patient_id_dn\" tabindex=\"3\"></div>
 			</td>
+						
 		</tr>
 		<tr style=\"border-bottom:1px solid #b8b8b8;\">
 			<td width=\"50%\" valign=\"top\">
@@ -452,7 +451,7 @@ if(!$_POST['action']):
 		endif;
 		
 		
-		echo "<div style=\"float:left;\"><h2>BLOOD SAMPLE REQUIREMENTS <span style=\"font-weight:normal;\">(recommended maximum - 50 ml � please provide clinical reasons for greater volumes)</span></h2></div>
+		echo "<div style=\"float:left;\"><h2>BLOOD SAMPLE REQUIREMENTS</h2></div>
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0; margin-bottom:0;\" id=\"tb-form\">
 		<tr>
@@ -515,13 +514,11 @@ if(!$_POST['action']):
 			<td width=\"100%\" style=\"text-align:justify; padding-right:5px;\">DISCLAIMER: The cell products collected from the donor are intended solely for the purpose of diagnostic testing on behalf of the above
 			mentioned patient. No other use is permissible. Excess blood volume is allowed for quality control testing only but not for research
 			purposes. Any portion of the cells not used for the intended testing must be disposed of properly. By accepting these cells, the transplant
-			physician also accepts these terms and conditions. Requests for deviations from these terms must be submitted in writing to the donor
+			center also accepts these terms and conditions. Requests for deviations from these terms must be submitted in writing to the donor
 			registry for approval.</td>
 		</tr>
 		<tr>
-			<td width=\"100%\" style=\"text-align:justify; padding-right:5px; border-bottom:0;\"><b>Courier Service:</b> CT samples will automatically be shipped using a courier service chosen by the donor center. The fees for
-			this CT sample are based on the use of this courier service. If you prefer that the samples be shipped using a specific courier
-			service, please list that courier service below. Additional fees may be applied.</td>
+			<td width=\"100%\" style=\"text-align:justify; padding-right:5px; border-bottom:0;\"><b>Shipment:</b> Samples will be shipped to the assigned TC address via FedEx unless otherwise specified. If you prefer that the samples be shipped using a specific courier service, please list that courier service below. Additional fees may be applied.</td>
 		</tr>
 		<tr>
 			<td width=\"100%\" style=\"text-align:justify; padding-right:5px; border-top:0;\">Preferred courier service: <input type=\"text\" style=\"width:500px;\" name=\"preferred_courier\" id=\"preferred_courier\" value=\"$preferred_courier\"></td>

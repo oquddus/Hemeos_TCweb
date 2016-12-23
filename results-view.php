@@ -198,20 +198,19 @@ ORDER BY datum_vlozeni DESC, MatchGradeInt ASC, PhenotypeQuality DESC, ID2 ASC")
 					
 					$hash=sha1($RegID.$PatientNum."SaltIsGoodForLife45");
 					
-					echo "<div style=\"float:left; width:100%; border-bottom:1px solid #c2c2c2; text-align:left; padding-bottom:2px;\"><b>Imported: "; if($datum_vlozeni>0): echo date("d.m.Y H:i",$datum_vlozeni); endif; echo "</b>
+					echo "<div style=\"float:left; width:100%; border-bottom:1px solid #c2c2c2; text-align:left; padding-bottom:2px;\"><b>Imported: "; if($datum_vlozeni>0): echo date("m.d.Y H:i",$datum_vlozeni); endif; echo "</b>
 					&nbsp;&nbsp;&nbsp; <span style=\"font-size:14px;\"><a href=\"results-donors.php?Rid=".$RegID."&amp;PatientNum=$PatientNum&amp;h=".$hash."\">Patient: $first_name $last_name, Patient ID: ".$RegID.$PatientNum."P</a></span></div>";
 					echo "<table cellspacing=\"0\" width=\"100%\" style=\"clear:left;\">
 					<thead id=\"tb-head\">
 					  <tr>
 						<td width=\"12%\">Donor ID</td>
-						<td width=\"14%\">Record Update</td>
-						<td width=\"5%\">Hub</td>
-						<td width=\"5%\">Status</td>
-						<td width=\"5%\">Type</td>
-						<td width=\"5%\">Sex</td>
+						<td width=\"12%\">Record Update</td>
+						<td width=\"7%\">Status</td>
+						<td width=\"7%\">Type</td>
+						<td width=\"7%\">Sex</td>
 						<td width=\"10%\">BirthDate</td>
 						<td width=\"16%\">MatchGrade ABDR</td>
-						<td width=\"14%\">MatchGrade</td>
+						<td width=\"15%\">MatchGrade</td>
 						<td width=\"16%\">Action</td>
 					  </tr>
 					</thead>
@@ -238,7 +237,6 @@ ORDER BY datum_vlozeni DESC, MatchGradeInt ASC, PhenotypeQuality DESC, ID2 ASC")
 				echo "<tr ".$styl.">";
 					echo "<td>$ID2</td>";
 					echo "<td>"; if($RecordUpdate>0): if(date("Y",$RecordUpdate)!=1970): echo date($_SESSION['date_format_php'],$RecordUpdate); endif; endif; echo "</td>";
-					echo "<td>$Hub</td>";
 					echo "<td>$Status</td>";
 					echo "<td>$Type</td>";
 					echo "<td>$Sex</td>";

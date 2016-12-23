@@ -248,7 +248,7 @@ $query_string=get_query_string();
 //--v url se uz mozna vyskytuje cislo stranky - to vyhodit
 $query_string=preg_replace("(lng=[a-z]+&)", "", $query_string);
 ?>
-<div class="logo"><img src="img/logo_en.gif" width="392" height="105" alt=""></div>
+<div class="logo"><img src="img/logo_en.gif" width="250" height="105" alt=""></div>
 <div class="odhlasit"><a href="logout.php" id="log-out"><img src="img/odhlasit<? echo $_SESSION['jazyk']; ?>.gif" width="144" height="30" alt=""></a></div>
 <div class="vlajky">
 <?

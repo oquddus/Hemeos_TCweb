@@ -6,7 +6,7 @@ ini_set('session.cookie_httponly', 1); //cookie pouze pomoci http protokolu - ne
 
 //-- Moved to apache config header('X-Content-Type-Options: nosniff');
 
-//--vytvo�en� session
+//--vytvoï¿½enï¿½ session
 session_start();
 
 
@@ -215,7 +215,7 @@ endif;
 <HTML><HEAD>
 
 <TITLE>Hemeos, LLC</TITLE>
-<link rel=”icon” href=”http://tc.hemeos.com/img/hemeos-favicon.ico” type=”image/icon”>
+<link rel=â€�iconâ€� href=â€�http://tc.hemeos.com/img/hemeos-favicon.icoâ€� type=â€�image/iconâ€�>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1250; X-Content-Type-Options=nosniff">
 <meta http-equiv="Content-Language" content="">
 <meta http-equiv="Content-Language" content="">
@@ -235,7 +235,7 @@ endif;
 
 <?
 //* =============================================================================
-//	Nastaven� (defaultn�ch) rozm�r� syst�mu
+//	Nastavenï¿½ (defaultnï¿½ch) rozmï¿½rï¿½ systï¿½mu
 //============================================================================= */
 
 		if(!$width): $width=973; endif;
@@ -263,9 +263,9 @@ $ID
 <div class="zaklad" style="width:<? echo $width; ?>px">
 
 
-<div class="logo"><img src="img/logo<? echo $_SESSION['jazyk']; ?>.gif" width="392" height="105" alt=""></div>
+<div class="logo"><img src="img/logo<? echo $_SESSION['jazyk']; ?>.gif" width="250" height="105" alt=""></div>
 <div class="user-login">
-<div class="warning-login"><img src="img/warning3.png" width="75" height="92" alt=""></div>
+<!--  <div class="warning-login"><img src="img/warning3.png" width="75" height="92" alt=""></div> -->
 <div class="vlajky">
 <?
 //echo "<a href=\"".$_SERVER['PHP_SELF']."?lng=cz&amp;$query_string\"><img src=\"img/vlajky/cz.png\" width=\"23\" height=\"18\" alt=\"\" style=\"margin-right:8px;\"></a><a href=\"".$_SERVER['PHP_SELF']."?lng=en&amp;$query_string\"><img src=\"img/vlajky/en.png\" width=\"23\" height=\"18\" alt=\"\"></a>";
@@ -284,23 +284,23 @@ $ID
 	if($_GET['st']):
 
 		if($_GET['st']=="no"):
-			echo gtext('Zadejte pros�m p�ihla�ovac� �daje',104).".";
+			echo gtext('Zadejte prosï¿½m pï¿½ihlaï¿½ovacï¿½ ï¿½daje',104).".";
 		endif;
 
 		if($_GET['st']=="bad"):
-			echo gtext('Zadan� �daje jsou chybn�',105).".!".$ID=0;
+			echo gtext('Zadanï¿½ ï¿½daje jsou chybnï¿½',105).".!".$ID=0;
 		endif;
 
 		if($_GET['st']=="block"):
-			echo gtext('��et byl zablokov�n z d�vodu op�tovn�ho chybn�ho p�ihl��en�',106).".";
+			echo gtext('ï¿½ï¿½et byl zablokovï¿½n z dï¿½vodu opï¿½tovnï¿½ho chybnï¿½ho pï¿½ihlï¿½ï¿½enï¿½',106).".";
 		endif;
 
 		if($_GET['st']=="logged"):
-			echo gtext('Pro p��stup do t�to oblasti mus�te b�t p�ihl��en',107).".";
+			echo gtext('Pro pï¿½ï¿½stup do tï¿½to oblasti musï¿½te bï¿½t pï¿½ihlï¿½ï¿½en',107).".";
 		endif;
 
 		if($_GET['st']=="rights"):
-			echo gtext('Pro p��stup do t�to oblasti nem�te opr�vn�n�',108).".";
+			echo gtext('Pro pï¿½ï¿½stup do tï¿½to oblasti nemï¿½te oprï¿½vnï¿½nï¿½',108).".";
 		endif;
 
 	endif;
@@ -317,7 +317,7 @@ $ID
 echo "<form onsubmit=\"return Kontrola();\" enctype=\"multipart/form-data\" method=\"POST\" action=\"\" name=\"formular\">
 
 	<div class=\"form-lr\">
-		<div class=\"form-left\" style=\"width:100px;\">".gtext('U�iv. jm�no',94).":</div>
+		<div class=\"form-left\" style=\"width:100px;\">".gtext('Uï¿½iv. jmï¿½no',94).":</div>
 		<div class=\"form-right\" style=\"width:230px;\"><input type=\"text\" style=\"width:220px;\" name=\"login\" value=\"$_POST[login]\"></div>
 	</div>
 
@@ -362,7 +362,7 @@ echo "<form onsubmit=\"return Kontrola();\" enctype=\"multipart/form-data\" meth
 	<div class="patka-vnitrek text4">
 		<div class="patka-text1"><span class="text3 bold">Hemeos, LLC</span><br><br>Tel.: +1 (480) 251-8012<br>email: <a href="mailto:douggrant@hemeos.com" class="odkaz1">douggrant@hemeos.com</a></div>
 		<div class="patka-text2"><span class="text3 bold"></div>
-		<div class="patka-text3">Copyright � 2010 Steiner,s.r.o.<br><br><? echo gtext('Verze',109)." ".$_version; ?><br>www.steiner.cz</div>
+		<div class="patka-text3">TC Portal<br><br>Beta Version 1.0<br>www.hemeos.com</div>
 	</div>
 </div></div>
 

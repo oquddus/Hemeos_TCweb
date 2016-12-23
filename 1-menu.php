@@ -10,7 +10,7 @@
 	
 	$_pole_menu['results']=array("results-view");
 	
-	$_pole_menu['donor']=array("donor-typing-request","donor-sample-request","donor-workup-request","donor-request-active");
+	$_pole_menu['donor']=array("donor-sample-request","donor-workup-request","donor-request-active");
 	
 	$_pole_menu['donresults']=array("donresults-results");
 	

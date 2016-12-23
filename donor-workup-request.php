@@ -166,7 +166,7 @@ if (!$_POST['action']):
 			</td>
 			
 			<td width=\"50%\" valign=\"top\">
-				<div style=\"float:left; margin-top:4px;\"><b>Patient ID number:</b><br>(by patient's registry)</div>
+				<div style=\"float:left; margin-top:4px;\"><b>Patient ID number:</b><br>(assigned by Hemeos)</div>
 				<div style=\"float:left; margin-left:5px;\">
 				<input type=\"text\" style=\"width:260px;\" name=\"PatientID\" id=\"PatientID\" value=\"";
     if ($PatientID): echo $PatientID; endif;
@@ -184,10 +184,8 @@ if (!$_POST['action']):
 				<div style=\"float:left; margin-left:5px;\"><input type=\"text\" style=\"width:250px;\" name=\"patient_registry\" id=\"patient_registry\" value=\"$patient_registry\" class=\"bg1\" readonly></div>
 			</td>
 			
-			<td width=\"50%\" valign=\"top\">
-				<div style=\"float:left; margin-top:4px;\"><b>Patient ID number:</b><br>(by donors's registry)</div>
-				<div style=\"float:left; margin-left:5px;\"><input type=\"text\" style=\"width:240px;\" name=\"patient_id_dn\" id=\"patient_id_dn\" value=\"$patient_id_dn\" tabindex=\"2\"></div>
-			</td>
+		<td width=\"50%\" valign=\"top\">
+    		</td>
 		</tr>
 		
 		<tr>
@@ -395,7 +393,7 @@ if (!$_POST['action']):
 			</td>
 		</tr>
 		<tr>
-			<td width=\"70%\">If you haveanswered yes to eitherof these questions above, is this donor requested for stem cell collection on this form the prefered donor?</td>
+			<td width=\"70%\">If you have answered yes to either of these questions above, is this donor requested for stem cell collection on this form the prefered donor?</td>
 			<td width=\"30%\">
 				<div style=\"float:left;\"><input type=\"radio\" name=\"donor_pref_3\" id=\"donor_pref_3_1\" value=\"1\"";
     if ($donor_pref_3 == 1): echo " checked"; endif;
@@ -428,40 +426,7 @@ if (!$_POST['action']):
 		<div style=\"float:left; margin-bottom:5px;\"><h2>Protocol data (please enclose a brief protocol flow chart)</h2></div>
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
-		<tr>
-			<td width=\"100%\" colspan=\"2\">
-				<div style=\"float:left;\"><input type=\"checkbox\" name=\"add_hpc_marrow\" id=\"add_hpc_marrow\" value=\"1\"";
-    if ($add_hpc_marrow == 1): echo " checked"; endif;
-    echo "></div>
-				<div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"add_hpc_marrow\">Additional HPC, Marrow</label></div>
-			</td>
-		</tr>
-		<tr>
-			<td width=\"100%\" colspan=\"2\">
-				<div style=\"float:left;\"><input type=\"checkbox\" name=\"add_hpc_apheresis\" id=\"add_hpc_apheresis\" value=\"1\"";
-    if ($add_hpc_apheresis == 1): echo " checked"; endif;
-    echo "></div>
-				<div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"add_hpc_apheresis\">Additional HPC, Apheresis</label></div>
-			</td>
-		</tr>
-		<tr>
-			<td width=\"70%\">
-				<div style=\"float:left;\"><input type=\"checkbox\" name=\"tcell_apheresis\" id=\"tcell_apheresis\" value=\"1\"";
-    if ($tcell_apheresis == 1): echo " checked"; endif;
-    echo "></div>
-				<div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"tcell_apheresis\">T-Cell, Apheresis, please specify number of DLI:</label></div>
-			</td>
-			<td width=\"30%\"><input type=\"text\" name=\"tcell_apheresis_no\" id=\"tcell_apheresis_no\" value=\"$tcell_apheresis_no\" style=\"width:230px;\"></td>
-		</tr>
-		<tr>
-			<td width=\"70%\">
-				<div style=\"float:left;\"><input type=\"checkbox\" name=\"other\" id=\"other\" value=\"1\"";
-    if ($other == 1): echo " checked"; endif;
-    echo "></div>
-				<div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"other\">Other, please specify:</label></div>
-			</td>
-			<td width=\"30%\"><input type=\"text\" name=\"other_text\" id=\"other_text\" value=\"$other_text\" style=\"width:230px;\"></td>
-		</tr>
+
 		<tr>
 			<td width=\"70%\">The number of days of conditioning regimen:</td>
 			<td width=\"30%\"><input type=\"text\" name=\"days_conditioning\" id=\"days_conditioning\" value=\"$days_conditioning\" style=\"width:230px;\"></td>
@@ -476,54 +441,11 @@ if (!$_POST['action']):
 		</tr>
 		</table>
 		
-		
-		<div style=\"float:left; margin-bottom:5px;\"><h2>The questions are only to be answered in case of T-Cells, Apheresis</h2></div>
-		
-		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
-		<tr>
-			<td width=\"70%\">Please list types and dates of any previous transplants:</td>
-			<td width=\"30%\"><input type=\"text\" name=\"previous_transplant\" id=\"previous_transplant\" value=\"$previous_transplant\" style=\"width:230px;\"></td>
-		</tr>
-		<tr>
-			<td width=\"70%\">Did the donor being requested above previously donate stem cells on behalf of this patient:</td>
-			<td width=\"30%\">
-				<div style=\"float:left;\"><input type=\"radio\" name=\"donor_requested\" id=\"donor_requested1\" value=\"1\"";
-    if ($donor_requested == 1): echo " checked"; endif;
-    echo "></div><div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"donor_requested1\">Yes</label></div>
-				<div style=\"float:left; margin:0 0 0 30px;\"><input type=\"radio\" name=\"donor_requested\" id=\"donor_requested2\" value=\"2\"";
-    if ($donor_requested == 2): echo " checked"; endif;
-    echo "></div><div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"donor_requested2\">No</label></div>
-			</td>
-		</tr>
-		<tr>
-			<td width=\"70%\">Was any of the original stem cell product cryopreserved for later infusion:</td>
-			<td width=\"30%\">
-				<div style=\"float:left;\"><input type=\"radio\" name=\"cryo\" id=\"cryo1\" value=\"1\"";
-    if ($cryo == 1): echo " checked"; endif;
-    echo "></div><div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"cryo1\">Yes</label></div>
-				<div style=\"float:left; margin:0 0 0 30px;\"><input type=\"radio\" name=\"cryo\" id=\"cryo2\" value=\"2\"";
-    if ($cryo == 2): echo " checked"; endif;
-    echo "></div><div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"cryo2\">No</label></div>
-			</td>
-		</tr>
-		<tr style=\"border-bottom:1px solid #b8b8b8;\">
-			<td width=\"70%\">If yes, was the product infused:</td>
-			<td width=\"30%\">
-				<div style=\"float:left;\"><input type=\"radio\" name=\"product_infused\" id=\"product_infused1\" value=\"1\"";
-    if ($product_infused == 1): echo " checked"; endif;
-    echo "></div><div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"product_infused1\">Yes</label></div>
-				<div style=\"float:left; margin:0 0 0 30px;\"><input type=\"radio\" name=\"product_infused\" id=\"product_infused2\" value=\"2\"";
-    if ($product_infused == 2): echo " checked"; endif;
-    echo "></div><div style=\"float:left; margin:2px 0 0 6px;\"><label for=\"product_infused2\">No</label></div>
-			</td>
-		</tr>
-		</table>
-		
 		<div style=\"float:left; margin-bottom:5px;\"><h2>Transplant history (in case of HPC, Marrow and/or HPC, Apheresis)</h2></div>
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
 		<tr style=\"border-bottom:1px solid #b8b8b8;\">
-			<td width=\"70%\">Had this patient received any previous stem cell transplans?</td>
+			<td width=\"70%\">Had this patient received any previous stem cell transplants?</td>
 			<td width=\"30%\">
 				<div style=\"float:left;\"><input type=\"radio\" name=\"received_transplans\" id=\"received_transplans1\" value=\"1\"";
     if ($received_transplans == 1): echo " checked"; endif;
@@ -536,12 +458,12 @@ if (!$_POST['action']):
 		</table>
 		
 		
-		<div style=\"float:left; margin-bottom:5px;\"><h2>Preferred dates (in order of preference)</h2></div>
+		<div style=\"float:left; margin-bottom:5px;\"><h2>Product delivery date (in order of preference)</h2></div>
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
 		<tr>
 			<td width=\"50%\">
-				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered date 1:</div>
+				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered transplant date 1:</div>
 				<div style=\"float:left; margin-left:28px;\"><input type=\"text\" style=\"width:180px;\" name=\"date_1\" id=\"date_1\" value=\"";
     if (!$date_1): echo $_SESSION['date_format'];
     else: echo date($_SESSION['date_format_php'], $date_1); endif;
@@ -565,7 +487,7 @@ if (!$_POST['action']):
 		</tr>
 		<tr>
 			<td width=\"50%\">
-				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered date 2:</div>
+				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered transplant date 2:</div>
 				<div style=\"float:left; margin-left:28px;\"><input type=\"text\" style=\"width:180px;\"
 				name=\"date_2\" id=\"date_2\" value=\"";
     if (!$date_2): echo $_SESSION['date_format'];
@@ -592,7 +514,7 @@ if (!$_POST['action']):
 		</tr>
 		<tr style=\"border-bottom:1px solid #b8b8b8;\">
 			<td width=\"50%\">
-				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered date 3:</div>
+				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered transplant date 3:</div>
 				<div style=\"float:left; margin-left:28px;\"><input type=\"text\" style=\"width:180px;\"
 				name=\"date_3\" id=\"date_3\" value=\"";
     if (!$date_3): echo $_SESSION['date_format'];
@@ -616,7 +538,7 @@ if (!$_POST['action']):
 		</tr>
 		</table>
 		
-		<div style=\"float:left; margin-bottom:5px;\"><h2>Additional comments:</h2></div>
+		<div style=\"float:left; margin-bottom:5px;\"><h2>Additional comments (please include cell dose for patient, total cell dose, and pre-collection blood sample requests and shipping address, as well as any notes)</h2></div>
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
 		<tr style=\"border-bottom:1px solid #b8b8b8;\">
