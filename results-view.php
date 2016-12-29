@@ -247,9 +247,8 @@ ORDER BY datum_vlozeni DESC, MatchGradeInt ASC, PhenotypeQuality DESC, ID2 ASC")
 					
 					
 					echo "<td>";
-					echo "<a href=\"results-donor.php?ID=$ID&amp;h=".$hash."\" title=\"VIEW\">".$ico_upravit."</a>";
-					echo "&nbsp;<a href=\"donor-typing-request.php?Pn=".$PatientNum."&amp;RegID=".$RegID."&amp;donors=$ID2\" title=\"NEW TYPING REQUEST\"><img src=\"img/ico/typing.png\" width=\"20\" height=\"20\" alt=\"NEW TYPING REQUEST\" style=\"margin-top:3px;\"></a>";
-					echo "&nbsp;<a href=\"donor-sample-request.php?Pn=".$PatientNum."&amp;RegID=".$RegID."&amp;donors=$ID2\" title=\"NEW SAMPLE REQUEST\"><img src=\"img/ico/typing.png\" width=\"20\" height=\"20\" alt=\"NEW SAMPLE REQUEST\" style=\"margin-top:3px;\"></a>";
+					echo "<a href=\"results-donor.php?ID=$ID&amp;h=".$hash."\" title=\"VIEW\">".$ico_upravit."</a>";					
+					echo "&nbsp;<a href=\"donor-sample-request.php?Pn=".$PatientNum."&amp;RegID=".$RegID."&amp;donors=$ID2\" title=\"NEW CT REQUEST\"><img src=\"img/ico/typing.png\" width=\"20\" height=\"20\" alt=\"NEW CT REQUEST\" style=\"margin-top:3px;\"></a>";
 					echo "&nbsp;<a href=\"donor-workup-request.php?Pn=".$PatientNum."&amp;RegID=".$RegID."&amp;donors=$ID2\" title=\"NEW WORKUP REQUEST\"><img src=\"img/ico/typing.png\" width=\"20\" height=\"20\" alt=\"NEW WORKUP REQUEST\" style=\"margin-top:3px;\"></a>";
 					//echo "&nbsp;&nbsp;<input type=\"checkbox\" name=\"cb_$ID\" value=\"$PatientNum|$ID2\">";
 					echo "</td>

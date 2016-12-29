@@ -393,7 +393,7 @@ if (!$_POST['action']):
 			</td>
 		</tr>
 		<tr>
-			<td width=\"70%\">If you have answered yes to either of these questions above, is this donor requested for stem cell collection on this form the prefered donor?</td>
+			<td width=\"70%\">If you have answered yes to either of these questions above, is this donor requested for stem cell collection on this form the preferred donor?</td>
 			<td width=\"30%\">
 				<div style=\"float:left;\"><input type=\"radio\" name=\"donor_pref_3\" id=\"donor_pref_3_1\" value=\"1\"";
     if ($donor_pref_3 == 1): echo " checked"; endif;
@@ -463,7 +463,7 @@ if (!$_POST['action']):
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
 		<tr>
 			<td width=\"50%\">
-				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered transplant date 1:</div>
+				<div style=\"float:left; margin:4px 0 0 20px;\">Preferred transplant date 1:</div>
 				<div style=\"float:left; margin-left:28px;\"><input type=\"text\" style=\"width:180px;\" name=\"date_1\" id=\"date_1\" value=\"";
     if (!$date_1): echo $_SESSION['date_format'];
     else: echo date($_SESSION['date_format_php'], $date_1); endif;
@@ -487,7 +487,7 @@ if (!$_POST['action']):
 		</tr>
 		<tr>
 			<td width=\"50%\">
-				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered transplant date 2:</div>
+				<div style=\"float:left; margin:4px 0 0 20px;\">Preferred transplant date 2:</div>
 				<div style=\"float:left; margin-left:28px;\"><input type=\"text\" style=\"width:180px;\"
 				name=\"date_2\" id=\"date_2\" value=\"";
     if (!$date_2): echo $_SESSION['date_format'];
@@ -514,7 +514,7 @@ if (!$_POST['action']):
 		</tr>
 		<tr style=\"border-bottom:1px solid #b8b8b8;\">
 			<td width=\"50%\">
-				<div style=\"float:left; margin:4px 0 0 20px;\">Prefered transplant date 3:</div>
+				<div style=\"float:left; margin:4px 0 0 20px;\">Preferred transplant date 3:</div>
 				<div style=\"float:left; margin-left:28px;\"><input type=\"text\" style=\"width:180px;\"
 				name=\"date_3\" id=\"date_3\" value=\"";
     if (!$date_3): echo $_SESSION['date_format'];
