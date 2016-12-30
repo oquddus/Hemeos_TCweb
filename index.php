@@ -215,7 +215,7 @@ endif;
 <HTML><HEAD>
 
 <TITLE>Hemeos, LLC</TITLE>
-<link rel=â€�iconâ€� href=â€�http://tc.hemeos.com/img/hemeos-favicon.icoâ€� type=â€�image/iconâ€�>
+<link rel=icon href=http://tc.hemeos.com/img/hemeos-favicon.ico type=image/icon>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1250; X-Content-Type-Options=nosniff">
 <meta http-equiv="Content-Language" content="">
 <meta http-equiv="Content-Language" content="">
@@ -255,6 +255,21 @@ endif;
 		$global_sirka7=$width-460;	//--sirka xinha boxu
 
 ?>
+
+
+<!-- Hotjar Tracking Code for www.hemeos.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:319654,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
 </HEAD>
 <BODY>
 $ID
