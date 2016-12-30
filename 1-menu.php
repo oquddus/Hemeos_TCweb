@@ -12,7 +12,7 @@
 	
 	$_pole_menu['donor']=array("donor-sample-request","donor-workup-request","donor-request-active");
 	
-	$_pole_menu['donresults']=array("donresults-results");
+	//$_pole_menu['donresults']=array("donresults-results");
 	
 	//$_pole_menu['workup']=array("workup-request","workup-sent");
 	//$_pole_menu['records']=array("results");

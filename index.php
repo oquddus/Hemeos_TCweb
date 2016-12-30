@@ -288,7 +288,7 @@ $ID
 		endif;
 
 		if($_GET['st']=="bad"):
-			echo gtext('Zadanï¿½ ï¿½daje jsou chybnï¿½',105).".!".$ID=0;
+			echo gtext('Zadanï¿½ ï¿½daje jsou chybnï¿½',105)."!";
 		endif;
 
 		if($_GET['st']=="block"):

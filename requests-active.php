@@ -317,7 +317,7 @@ WHERE search_request.ID_stavu='2' $where_hledej $where ORDER BY $orderby LIMIT $
 				<td width=\"17%\">".order('Last name', 'last_name')."</td>
 				<td width=\"14%\">".order('First name', 'first_name')."</td>
 				<td width=\"13%\">".order('Patient ID', 'PatientNum')."</td>
-				<td width=\"14%\">".order('Recieved', 'datum_zpracovani')."</td>
+				<td width=\"14%\">".order('Received', 'datum_zpracovani')."</td>
 				<td width=\"15%\">".order('Search status', 'status')."</td>
 				<td width=\"10%\">Action</td>
 				<td width=\"4%\"></td>
@@ -397,8 +397,8 @@ WHERE search_request.ID_stavu='2' $where_hledej $where ORDER BY $orderby LIMIT $
 			
 			echo "<div style=\"float:right; width:300px; text-align:right;\">Selected: ";
 			echo "<select name=\"operation\" id=\"operation\">
-				<option value=\"1\""; if($operation==1): echo " selected"; endif; echo ">Move to suspended</option>
-				<option value=\"2\""; if($operation==2): echo " selected"; endif; echo ">Move to stopped</option>
+				<option value=\"1\""; if($operation==1): echo " selected"; endif; echo ">Delete Patient Profile</option>
+				<option value=\"2\""; if($operation==2): echo " selected"; endif; echo ">Move to Paused</option>
 			</select>";
 			echo "</div>";
 			

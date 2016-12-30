@@ -278,9 +278,9 @@ WHERE search_request.ID_stavu IN(4,5) $where_hledej $where ORDER BY $orderby LIM
 			echo "<div style=\"float:right; width:300px; text-align:right;\">Selected: ";
 			echo "<select name=\"operation\" id=\"operation\">";
 				//echo "<option value=\"1\""; if($operation==1): echo " selected"; endif; echo ">Move to sent requests</option>";
-				echo "<option value=\"2\""; if($operation==2): echo " selected"; endif; echo ">Move to suspended</option>";
+				echo "<option value=\"2\""; if($operation==2): echo " selected"; endif; echo ">Delete Patient Profile</option>";
 				//echo "<option value=\"8\""; if($operation==8): echo " selected"; endif; echo ">Move to stopped</option>";		//to zde ve stopped asi neni nutno
-				echo "<option value=\"3\""; if($operation==3): echo " selected"; endif; echo ">Move to active</option>
+				echo "<option value=\"3\""; if($operation==3): echo " selected"; endif; echo ">Move to Active</option>
 			</select>";
 			echo "</div>";
 			

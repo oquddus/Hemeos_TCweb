@@ -226,14 +226,14 @@ $vysledek = mysql_query("SELECT 1 AS druh, typing_request.ID, typing_request.dat
 		echo "<table cellspacing=\"0\" width=\"100%\">
 			<thead id=\"tb-head\">
 			  <tr>
-			    <td width=\"10%\">".order('Req. date', 'datum_request')."</td>
-				<td width=\"12%\">".order('Patient ID', 'PatientNum')."</td>
-				<td width=\"18%\">".order('Patient Name', 'patient_name')."</td>
-				<td width=\"15%\">".order('Donor ID', 'DonorID')."</td>
-				<td width=\"17%\">Diagnosis</td>
-				<td width=\"9%\">Category</td>
-				<td width=\"10%\">Status</td>
-				<td width=\"10%\">Action</td>
+			    <td width=\"9%\">".order('Req. date', 'datum_request')."</td>
+				<td width=\"9%\">".order('Patient ID', 'PatientNum')."</td>
+				<td width=\"10%\">".order('Patient Name', 'patient_name')."</td>
+				<td width=\"8%\">".order('Donor ID', 'DonorID')."</td>
+				<td width=\"21%\">Diagnosis</td>
+				<td width=\"10%\">Category</td>
+				<td width=\"23%\">Status</td>
+				<td width=\"12%\">Action</td>
 			  </tr>
 			</thead>
 			<tbody id=\"tb-body\">";
@@ -310,19 +310,19 @@ $vysledek = mysql_query("SELECT 1 AS druh, typing_request.ID, typing_request.dat
 					echo "<td>$diagnosis</td>";
 					echo "<td>";
 						if($druh==1):	//Typing
-							echo "Typing req.";
+							echo "Typing Req.";
 						endif;
 						if($druh==2):	//sample
-							echo "Sample req.";
+							echo "CT Req.";
 						endif;
 						if($druh==3):	//worku
-							echo "Workup req.";
+							echo "Workup Req.";
 						endif;
 					echo "</td>";
 					echo "<td>";
 
 						if($ID_stavu==0):
-							echo "Waiting for send";
+							echo "In Progress";
 						endif;
 
 						if($ID_stavu==2):
@@ -345,7 +345,7 @@ $vysledek = mysql_query("SELECT 1 AS druh, typing_request.ID, typing_request.dat
 							elseif($jsou_vysledky_response):
 								echo "Response";
 							else:
-								echo "Without result";
+								echo "Complete: check email for results";
 							endif;
 						endif;
 

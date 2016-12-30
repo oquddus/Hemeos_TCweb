@@ -37,10 +37,8 @@ if ($_POST['action'] == "vlozit"):
 
 		uprav_data();
 
-
+		
 		insert_tb('workup_request');
-
-
 		if ($idcko):    //--pokud vse vlozeno, vim id vlozeneho radku
 			message(3, "Item was successfuly inserted.", "Insert next one", "$_SERVER[PHP_SELF]");
 		else:
@@ -52,6 +50,11 @@ if ($_POST['action'] == "vlozit"):
 	else:
 		message(1, "Form can not be sent, token not found.", "", "");
 	endif;
+	
+	
+	
+	
+	
 
 endif;
 
@@ -67,9 +70,14 @@ if ($_POST['action'] == "upravit"):
 		$update[0] = array("ID", "ID_stavu", "datum_odeslani", "datum_zpracovani", "duvod");    //--ktere sloupce vyloucit z updatu
 		$update[1] = array("WHERE ID='" . mysql_real_escape_string($_GET['ID']) . "'");    //--where
 
-		update_tb('workup_request', $update);    //--tabulka   |   pole vyloucenych sloupcu
+		mysql_query("DELETE FROM workup_request WHERE ID='".clean_high($_GET['ID'])."'");
+		
+		insert_tb('workup_request');
+		//update_tb('workup_request', $update);    //--tabulka   |   pole vyloucenych sloupcu
 
-		if ($SQL):    //--pokud update neco zmenil
+		
+		
+				if ($SQL):    //--pokud update neco zmenil
 			message(1, "Item was successfuly edited.", "", "");
 		else:
 			message(1, "Item was not edited.", "", "");
@@ -127,7 +135,7 @@ if (!$_POST['action']):
         if ($ID_stavu == 0 || $ID_stavu == 2):
             echo "<form onsubmit=\"return Kontrola();\" enctype=\"multipart/form-data\" method=\"POST\" action=\"\" name=\"formular\">";
         else:
-            message(1, "Record was aleready sent, now you can only read.", "", "");
+            message(1, "Record was already sent, now you can only read.", "", "");
         endif;
 
     else:
@@ -423,7 +431,7 @@ if (!$_POST['action']):
 		</tr>
 		</table>
 		
-		<div style=\"float:left; margin-bottom:5px;\"><h2>Protocol data (please enclose a brief protocol flow chart)</h2></div>
+		<div style=\"float:left; margin-bottom:5px;\"><h2>Preparative Regimen</h2></div>
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
 
@@ -538,7 +546,7 @@ if (!$_POST['action']):
 		</tr>
 		</table>
 		
-		<div style=\"float:left; margin-bottom:5px;\"><h2>Additional comments (please include cell dose for patient, total cell dose, and pre-collection blood sample requests and shipping address, as well as any notes)</h2></div>
+		<div style=\"float:left; margin-bottom:5px;\"><h2>Additional comments (please include description of patient prep, cell dose for patient, total cell dose, and pre-collection blood sample requests and shipping address, as well as any notes)</h2></div>
 		
 		<table cellspacing=\"0\" width=\"100%\" style=\"border:0;\" id=\"tb-form\">
 		<tr style=\"border-bottom:1px solid #b8b8b8;\">
@@ -608,7 +616,7 @@ if (!$_POST['action']):
 //* =============================================================================
 //	JS
 //============================================================================= */
-    echo "<SCRIPT language=\"JavaScript\" type=\"text/javascript\">
+     echo "<SCRIPT language=\"JavaScript\" type=\"text/javascript\">
 	
 	function zmena_pacienta(neprepisovat){
 		
