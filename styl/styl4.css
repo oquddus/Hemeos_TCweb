@@ -118,7 +118,7 @@ img { border:0; }
 
 
 .vnitrek-obal-login {
-	float:left; 
+	float:left;
 	margin-left:4px; display:inline;
 	background-color:#fefefe;
 	background-image: url('../img/bg-stin-b.gif'); background-repeat: repeat-x; background-position: left bottom;
@@ -219,7 +219,7 @@ img { border:0; }
 	padding:3px;
 	font-size:11px;
 	font-weight:normal;
-/*	
+/*
 -webkit-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.4);
 -moz-box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.4);
 box-shadow: 5px 5px 5px -5px rgba(0,0,0,0.4);
@@ -400,7 +400,7 @@ a {
 
 
 a:hover  {
-	color: #2a67a5;
+	color: #585751;
 	TEXT-DECORATION: none;
 }
 
@@ -437,7 +437,7 @@ a.odkaz3 {
 
 
 a.odkaz3:hover  {
-	color: #2a67a5;
+	color: #585751;
 	TEXT-DECORATION: underline;
 }
 
@@ -539,7 +539,7 @@ input, textarea, select {
 	color: #515151;
 	font-size: 12px;
 	font-family: Arial;
-	
+
 	border:1px solid #d6d6d6;
 	background-color: #f7f7f7;
 	padding:0; margin:0;
@@ -654,7 +654,7 @@ Filtrovaci formulare
 
 .hledej-input {
 	float:right; width:40%;
-	margin-right:12px; display:inline; 
+	margin-right:12px; display:inline;
 	text-align:right;
 }
 
@@ -665,7 +665,7 @@ Filtrovaci formulare
 	border:1px #e1e7ea solid;
 	text-align:left;
 	margin:0;
-	
+
 }
 
 
@@ -703,7 +703,7 @@ Zatmeni obrazovky, kalendar
 
 
 /* =============================================================================
-Styly kalendáøe 
+Styly kalendï¿½ï¿½e
 ============================================================================= */
 .kalendar0 {	float:left; width: auto; height:auto; border-left: 1px solid #0b0b0b; border-right: 1px solid #0b0b0b; border-bottom: 1px solid #0b0b0b;}
 .kalendar { float:left; width: 302px; height:auto; background-color:#1f1f1f; padding-bottom:1px; }
