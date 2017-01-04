@@ -353,15 +353,14 @@ if ($DEBUG_CFG==1)echo mysql_error();
 		echo "<table cellspacing=\"0\" width=\"100%\">
 			<thead id=\"tb-head\">
 			  <tr>";
-				echo "<td width=\"5%\">".order('IntID', 'ID')."</td>";
+				echo "<td width=\"8%\">".order('IntID', 'ID')."</td>";
 				echo "<td width=\"12%\">".order('Request date', 'date_request')."</td>
-				<td width=\"14%\">".order('Last name', 'last_name')."</td>
-				<td width=\"14%\">".order('First name', 'first_name')."</td>
-				<td width=\"10%\">".order('Patient ID', 'PatientNum')."</td>
+				<td width=\"15%\">".order('Last name', 'last_name')."</td>
+				<td width=\"15%\">".order('First name', 'first_name')."</td>
+				<td width=\"15%\">".order('Patient ID', 'PatientNum')."</td>
 				<td width=\"15%\">".order('Transplant center', 'InstID')."</td>
-				<td width=\"20%\">".order('Status', 'ID_stavu')."</td>
-				<td width=\"8%\">Action</td>
-				<td width=\"4%\"></td>
+				<td width=\"5%\">Action</td>
+				<td width=\"15%\"></td>
 			  </tr>
 			</thead>
 			<tbody id=\"tb-body\">";
@@ -425,9 +424,9 @@ if ($DEBUG_CFG==1)echo mysql_error();
 			
 			echo "<div style=\"float:right; width:600px; text-align:right;\">Selected: ";
 			echo "<select name=\"operation\" id=\"operation\">
-				<option value=\"1\""; if($operation==1): echo " selected"; endif; echo ">Move to suspended</option>
-				<option value=\"2\""; if($operation==2): echo " selected"; endif; echo ">Move to stopped</option>
-				<option value=\"3\""; if($operation==3): echo " selected"; endif; echo ">Move to active</option>
+				<option value=\"1\""; if($operation==1): echo " selected"; endif; echo ">Delete Patient Profile</option>
+				<option value=\"2\""; if($operation==2): echo " selected"; endif; echo ">Move to Paused</option>
+				<option value=\"3\""; if($operation==3): echo " selected"; endif; echo ">Move to Active</option>
 			</select>";
 			echo "</div>";
 			
