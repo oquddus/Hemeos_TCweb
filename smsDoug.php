@@ -14,7 +14,7 @@ $client = SnsClient::factory(array(
 );
 
 // $message = array_pop( $argv );
-$message = "Hello Hemeos World!!";
+$message = "TC Web Patient Search Alert!";
 
 $payload = array(
     'TopicArn' => 'arn:aws:sns:us-east-1:381753482005:Patient_Search_Alert',
@@ -28,4 +28,3 @@ try {
 } catch ( Exception $e ) {
     echo ' Send Failed \n ' . $e->getMessage();
 };
-
