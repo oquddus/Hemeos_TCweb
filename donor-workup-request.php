@@ -186,6 +186,15 @@ if (!$_POST['action']):
     echo "\" readonly></div>
 			</td>
 		</tr>
+		<tr>
+			<td width=\"50%\" valign=\"top\">
+				<div style=\"float:left; margin-top:4px;\"><b>Patient registry:</b></div>
+				<div style=\"float:left; margin-left:5px;\"><input type=\"text\" style=\"width:250px;\" name=\"patient_registry\" id=\"patient_registry\" value=\"$patient_registry\" class=\"bg1\" readonly></div>
+			</td>
+			
+		<td width=\"50%\" valign=\"top\">
+    		</td>
+		</tr>
 		
 		<tr>
 			<td width=\"50%\" valign=\"top\">
@@ -275,6 +284,8 @@ if (!$_POST['action']):
 			</td>
 			
 			<td width=\"50%\" valign=\"top\">
+				<div style=\"float:left; margin-top:4px;\"><b>Donor registry:</b></div>
+				<div style=\"float:left; width:84px; margin:4px 0 0 5px;\"><span id=\"id_donor_registry\">$donor_registry</span> <input type=\"hidden\" value=\"$donor_registry\" name=\"donor_registry\" id=\"donor_registry\"></div>
 			</td>
 		</tr>
 		<tr style=\"border-bottom:1px solid #b8b8b8;\">
