@@ -895,11 +895,11 @@ if(!$_POST['action']):
 			//nelze upravit requesty ve stavu 2(active)
 			if(!$PatientNum):
 				echo "<div style=\"float:left; width:98%; margin-top:10px; text-align:center;\">
-					<input type=\"submit\" class=\"form-send-new\" name=\"B1\" id=\"B1\" value=\"Submit\" >";
+				<input type=\"submit\" class=\"form-send-new\" name=\"B1\" id=\"B1\" value=\"Submit\" >";
 
-					if(!$_GET['ID'] || $_GET['w']):
-						echo "<input type=\"submit\" class=\"form-send-new\" name=\"B2\" id=\"B2\" value=\"Save as a working version\" style=\"margin-left:80px;\" >";
-					endif;
+				//	if(!$_GET['ID'] || $_GET['w']):
+				//		echo "<input type=\"submit\" class=\"form-send-new\" name=\"B2\" id=\"B2\" value=\"Save as a working version\" style=\"margin-left:80px;\" >";
+				//	endif;
 				echo "</div>";
 
 

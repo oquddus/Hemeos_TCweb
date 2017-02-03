@@ -6,7 +6,7 @@
 //============================================================================= */
 
 	//$_pole_menu['requests']=array("requests-vlozit", "requests-sent", "requests-active", "requests-suspended", "requests-stopped");
-	$_pole_menu['requests']=array("requests-vlozit", "requests-sent", "requests-active", "requests-stopped", "requests-working");
+	$_pole_menu['requests']=array("requests-vlozit", "requests-sent", "requests-active", "requests-stopped");
 	
 	$_pole_menu['results']=array("results-view");
 	
